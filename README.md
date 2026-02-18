@@ -1,131 +1,109 @@
-# 📊 BPS Tanjak - Dashboard Looker Studio
+# 📊 BPS Tanjak - Dasbor Looker Studio
 
-Dashboard interaktif untuk visualisasi data BPS (Badan Pusat Statistik) yang terintegrasi dengan Google Looker Studio.
+Dasbor interaktif untuk visualisasi data BPS (Badan Pusat Statistik) yang terintegrasi langsung dengan Google Looker Studio.
 
 ## 🎯 Deskripsi
 
-Project ini merupakan aplikasi web sederhana yang menampilkan dashboard analitik BPS secara embedded menggunakan Looker Studio. Dashboard ini menyediakan visualisasi data yang interaktif dan responsif untuk memudahkan analisis data statistik.
+Proyek ini adalah aplikasi web sederhana yang menampilkan dasbor analitik BPS secara *embedded* menggunakan Looker Studio. Dasbor ini menyediakan visualisasi data yang interaktif dan responsif, dibungkus dengan antarmuka yang bersih dan modern untuk memudahkan analisis data statistik.
 
 ## ✨ Fitur
 
-- 🖥️ **Dashboard Embedded**: Menampilkan Looker Studio dashboard dalam tampilan yang bersih dan modern
-- 📱 **Responsive Design**: Tampilan optimal di berbagai ukuran layar (desktop, tablet, mobile)
-- 🎨 **Modern UI**: Antarmuka pengguna yang clean dengan desain minimalis
-- ⚡ **Lightweight**: Tidak menggunakan framework JavaScript, murni HTML/CSS
-- 🔒 **Sandbox Security**: Iframe dengan konfigurasi sandbox untuk keamanan
+- 🖥️ **Dasbor Terintegrasi**: Menampilkan dasbor Looker Studio dengan tampilan yang bersih tanpa gangguan.
+- 📱 **Desain Responsif**: Tampilan optimal di berbagai ukuran layar (desktop, tablet, seluler).
+- 🎨 **Antarmuka Modern**: Menggunakan desain minimalis, tipografi yang rapi, dan efek visual halus.
+- 🔄 **Indikator Pemuatan**: Menampilkan animasi *spinner* saat memuat data, dengan transisi yang halus (*fade-in*).
+- 🧭 **Navigasi Kustom**: Bilah navigasi (footer) dengan gaya *glassmorphism* untuk berpindah halaman laporan dengan mudah.
+- ⚡ **Ringan**: Tidak menggunakan kerangka kerja (framework) JavaScript yang berat, murni HTML/CSS dan sedikit JavaScript bawaan.
+- 🔒 **Keamanan Sandbox**: Iframe dikonfigurasi dengan *sandbox* untuk keamanan yang lebih baik.
 
 ## 🛠️ Teknologi
 
-- **HTML5**: Struktur halaman web
-- **CSS3**: Styling dengan custom properties (CSS variables)
-- **Inter Font**: Typography modern dari Google Fonts
-- **Looker Studio**: Platform visualisasi data dari Google
+- **HTML5**: Struktur halaman web semantik.
+- **CSS3**: Penataan gaya dengan *CSS Variables*, Flexbox, dan *Backdrop Filter*.
+- **JavaScript (Vanilla)**: Logika sederhana untuk indikator pemuatan.
+- **Inter Font**: Tipografi modern dari Google Fonts.
+- **Looker Studio**: Platform visualisasi data dari Google.
+- **PHP**: *Scripting* server sederhana untuk manajemen rute halaman.
 
 ## 📂 Struktur File
 
 ```
 BPS-Tanjak/
-├── main.php          # Halaman utama dashboard
-├── style.css         # Stylesheet dengan modern design
-└── README.md         # Dokumentasi project
+├── index.php         # Halaman utama dasbor & logika pemuatan
+├── style.css         # Stylesheet dengan desain modern
+└── README.md         # Dokumentasi proyek
 ```
 
 ## 🚀 Cara Menggunakan
 
 ### Instalasi
 
-1. Clone repository ini:
-```bash
-git clone https://github.com/Cahyadi-Prasetyo/BPS-Tanjak.git
-cd BPS-Tanjak
-```
+1. **Clone repositori ini:**
+   ```bash
+   git clone https://github.com/Cahyadi-Prasetyo/BPS-Tanjak.git
+   cd BPS-Tanjak
+   ```
 
-2. Jalankan dengan web server lokal
+2. **Jalankan server lokal:**
 
-**Menggunakan PHP Built-in Server:**
-```bash
-php -S localhost:8000
-```
+   **Menggunakan PHP Built-in Server (Disarankan):**
+   ```bash
+   php -S localhost:8000
+   ```
 
-**Menggunakan Python:**
-```bash
-# Python 3
-python -m http.server 8000
+3. **Buka di browser:**
+   Akses alamat berikut di peramban web Anda:
+   ```
+   http://localhost:8000
+   ```
 
-# Python 2
-python -m SimpleHTTPServer 8000
-```
+## 🎨 Sistem Desain
 
-3. Buka browser dan akses:
-```
-http://localhost:8000/main.php
-```
+Dasbor ini menggunakan sistem desain modern dengan spesifikasi berikut:
 
-## 🎨 Design System
+### Palet Warna
+- **Latar Belakang**: `#f8fafc` (Slate 50) - Abu-abu sangat muda yang sejuk.
+- **Latar Kartu**: `#ffffff` (Putih).
+- **Utama (Primary)**: `#0284c7` (Sky 600) - Biru cerah untuk aksi dan elemen aktif.
+- **Hover Utama**: `#0369a1` (Sky 700).
+- **Teks Utama**: `#1e293b` (Slate 800) - Warna teks yang mudah dibaca.
+- **Teks Muted**: `#64748b` (Slate 500) - Untuk elemen sekunder.
 
-Dashboard ini menggunakan design system modern dengan komponen berikut:
+### Tipografi
+- **Keluarga Font**: Inter (Google Fonts).
+- **Ketebalan**: 400 (Regular), 500 (Medium), 600 (Semibold).
 
-### Color Palette
-- **Background**: `#f1f5f9` (Slate 100)
-- **Card Background**: `#ffffff` (White)
-- **Primary**: `#0284c7` (Sky 600)
-- **Text Main**: `#0f172a` (Slate 900)
-- **Text Muted**: `#64748b` (Slate 500)
+## 📱 Responsivitas
 
-### Typography
-- **Font Family**: Inter (Google Fonts)
-- **Weights**: 400 (Regular), 500 (Medium), 600 (Semibold)
-
-## 📱 Responsive Breakpoints
-
-- **Mobile**: < 640px
-  - Header padding lebih compact
-  - Brand pill disembunyikan
-  - Canvas padding dikurangi
+- **Seluler (< 640px)**:
+  - Ukuran tombol navigasi disesuaikan agar pas dengan jari.
+  - Jarak antar elemen diperkecil agar tidak memakan tempat.
+  - *Viewport* diatur agar konten tidak terpotong.
 
 ## 🔧 Konfigurasi
 
-Untuk mengubah dashboard Looker Studio yang ditampilkan, edit `src` pada iframe di file `main.php`:
+Untuk mengubah laporan Looker Studio yang ditampilkan, edit URL pada array `$pages` di file `index.php`:
 
-```html
-<iframe 
-    src="https://lookerstudio.google.com/embed/reporting/YOUR_REPORT_ID/page/YOUR_PAGE_ID" 
-    ...>
-</iframe>
+```php
+$pages = [
+    1 => 'URL_HALAMAN_1_ANDA',
+    2 => 'URL_HALAMAN_2_ANDA',
+    // tambahkan halaman lainnya...
+];
 ```
 
-Ganti `YOUR_REPORT_ID` dan `YOUR_PAGE_ID` dengan ID dari dashboard Looker Studio Anda.
+## 📝 Cabang (Branches)
 
-## 📝 Branches
+- **`main`**: Kode stabil untuk produksi.
 
-- **`main`**: Branch utama untuk production code
-- **`dev`**: Branch untuk development dan testing
-
-## 🤝 Contributing
+## 🤝 Kontribusi
 
 Kontribusi selalu diterima! Silakan ikuti langkah berikut:
 
-1. Fork repository ini
-2. Buat branch fitur baru (`git checkout -b feature/AmazingFeature`)
-3. Commit perubahan Anda (`git commit -m 'Add some AmazingFeature'`)
-4. Push ke branch (`git push origin feature/AmazingFeature`)
-5. Buat Pull Request
+1. *Fork* repositori ini.
+2. Buat cabang fitur baru (`git checkout -b fitur/FiturKeren`).
+3. *Commit* perubahan Anda (`git commit -m 'Menambahkan FiturKeren'`).
+4. *Push* ke cabang (`git push origin fitur/FiturKeren`).
+5. Buat *Pull Request*.
 
-## 📄 License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
-## 👤 Author
-
-**Cahyadi Prasetyo**
-
-- GitHub: [@Cahyadi-Prasetyo](https://github.com/Cahyadi-Prasetyo)
-- Repository: [BPS-Tanjak](https://github.com/Cahyadi-Prasetyo/BPS-Tanjak)
-
-## 📞 Support
-
-Jika Anda memiliki pertanyaan atau menemukan bug, silakan buat [issue](https://github.com/Cahyadi-Prasetyo/BPS-Tanjak/issues) di repository ini.
-
----
-
-⭐ Jika project ini bermanfaat, jangan lupa berikan star!
+⭐ Jika proyek ini bermanfaat, jangan lupa berikan bintang!

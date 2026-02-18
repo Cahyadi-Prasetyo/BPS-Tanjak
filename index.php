@@ -27,7 +27,7 @@ $currentUrl = $pages[$currentPage];
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="style.css?v=<?= time(); ?>">
 </head>
 <body>
     <main class="canvas-wrapper">
@@ -40,7 +40,7 @@ $currentUrl = $pages[$currentPage];
             <div class="report-container">
                 <iframe 
                     id="reportFrame"
-                    src="<?php echo $currentUrl; ?>" 
+                    src="<?= $currentUrl; ?>" 
                     frameborder="0" 
                     style="border:0" 
                     allowfullscreen 
