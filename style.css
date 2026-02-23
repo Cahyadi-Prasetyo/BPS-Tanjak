@@ -51,10 +51,10 @@ body {
     width: 100%;
     /* 
        TRICK: Make the height taller than the container to push the footer out of view.
-       Looker Studio footer is usually around 40-50px.
-       We set height to calc(100% + 50px) and the parent has overflow:hidden.
+       Looker Studio footer is usually around 25-30px.
+       We set height to calc(100% + 30px) and the parent has overflow:hidden.
     */
-    height: calc(100% + 50px);
+    height: calc(100% + 30px);
     position: relative;
     top: 0;
 }
@@ -139,5 +139,10 @@ iframe {
         width: 36px;
         height: 36px;
         font-size: 0.9rem;
+    }
+
+    .report-container {
+        /* Reduce cropping on mobile so less content is cut off */
+        height: calc(100% + 25px);
     }
 }
